@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>스마트 분리수거 도우미</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src=<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d3486cbea4b28b86d7dc12f0bb5ab097"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>♻ 스마트 분리수거 도우미</h1>
+    <p>유성구 생활쓰레기 배출장소 찾기</p>
+</header>
+
+<div class="container">
+
+    <button onclick="findMyLocation()">
+        📍 내 위치 찾기
+    </button>
+
+    <div id="nearestInfo">
+        위치를 조회하면 가장 가까운 배출장소가 표시됩니다.
+    </div>
+
+    <div id="map"></div>
+
+</div>
+
+<footer>
+    공공데이터포털 + 카카오맵 API 활용
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
