@@ -1,72 +1,128 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:'Segoe UI', sans-serif;
-    background:#f4f7f4;
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    background: #f4f7f4;
+    color: #333; /* 기본 글자색 지정 */
+    line-height: 1.6;
 }
 
-header{
-    background:#2e8b57;
-    color:white;
-    text-align:center;
-    padding:20px;
+header {
+    background: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 30px 20px; /* 위아래 여백을 조금 더 주어 시원하게 변경 */
+    margin-bottom: 20px;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
-button{
-    width:100%;
-    margin:20px 0;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    background:#4CAF50;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
+header p {
+    font-size: 14px;
+    opacity: 0.9;
 }
 
-button:hover{
-    background:#45a049;
+.container {
+    width: 90%;
+    max-width: 800px; /* 지도가 너무 퍼지지 않도록 최대 너비를 살짝 조절 */
+    margin: auto;
 }
 
-#nearestInfo{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:20px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.15);
+button {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease; /* 부드러운 호버 효과 */
 }
 
-#map{
-    width:100%;
-    height:600px;
-    border-radius:10px;
+button:hover {
+    background: #45a049;
 }
 
-footer{
-    margin-top:20px;
-    text-align:center;
-    padding:20px;
-    color:#666;
+#nearestInfo {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08); /* 부드러운 그림자 */
 }
 
-@media(max-width:768px){
+/* 📍 안내 화면 내부의 텍스트와 타이틀 스타일 정의 */
+#nearestInfo h2 {
+    font-size: 18px;
+    color: #2e8b57;
+    margin-bottom: 12px;
+}
 
-    #map{
-        height:450px;
+#nearestInfo p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* 🗺️ 길찾기 버튼 스타일 추가 */
+.route-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.route-btn:hover {
+    background: #2980b9;
+}
+
+#map {
+    width: 100%;
+    height: 500px; /* 데스크톱 기준 기본 높이 조절 */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 13px;
+}
+
+/* 📱 모바일 반응형 처리 */
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 20px;
     }
 
-    button{
-        font-size:16px;
+    #map {
+        height: 350px; /* 모바일 화면에 맞게 지도 높이 최적화 */
     }
 
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    #nearestInfo {
+        padding: 15px;
+    }
 }
